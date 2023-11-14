@@ -64,3 +64,17 @@ http://localhost:8000/api/v1/users
 ```
 
 ---
+
+## 起動方法
+
+.envファイルの作成
+```shell
+cp .env.sample .env
+```
+
+起動
+```shell
+docker compose up -d
+```
+
+---
