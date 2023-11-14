@@ -1,0 +1,16 @@
+version: '3'
+services:
+  express:
+    image: express-typescript-sample-image
+    container_name: express-typescript-sample-container
+    build:
+      context: .
+      dockerfile: ./container/node/Dockerfile
+    tty: true
+    volumes:
+      - ./express:/app
+    ports:
+      - "8000:3000"
+#    command: yarn start
+    environment:
+      - CHOKIDAR_USEPOLLING=true
