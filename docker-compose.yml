@@ -11,6 +11,6 @@ services:
       - ./express:/app
     ports:
       - "8000:3000"
-#    command: yarn start
+    command: yarn start
     environment:
       - CHOKIDAR_USEPOLLING=true
