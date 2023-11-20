@@ -20,6 +20,8 @@ export const loginHandler = async (req: Request, res: Response) => {
   }
 
   const expectedHash = authentication(user.authentication.salt, password)
+  console.log(user)
+  console.log(expectedHash)
 
   if (user.authentication.password !== expectedHash){
     return res.status(403).json({message: "メールアドレスとパスワードが正しくありません"}).end()
